@@ -18,14 +18,14 @@ class SaveActivity : AppCompatActivity() {
 
             val text = input.text.toString()
 
-            //val editor = sharedPreferences.edit()
-            //editor.putString("SAVE", text.toString())
+            val editor = sharedPreferences.edit()
+            editor.putString("SAVE", text.toString())
 
              val loadPage = Intent(this, LoadActivity::class.java)
 
                 loadPage.putExtra("DATA",text)
 
-            //editor.apply()
+            editor.apply()
 
             }
         }

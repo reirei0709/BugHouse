@@ -15,7 +15,7 @@ class LoadActivity : AppCompatActivity() {
         loadtextView.text = load
 
 
-        //val sharedPreferences = getSharedPreferences("Second", Context.MODE_PRIVATE)
-        //loadtextView.text = sharedPreferences.getString("SAVE", "")
+        val sharedPreferences = getSharedPreferences("Second", Context.MODE_PRIVATE)
+        loadtextView.text = sharedPreferences.getString("SAVE", "")
     }
 }
