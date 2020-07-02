@@ -10,7 +10,7 @@ class DetailActivity : AppCompatActivity() {
         setContentView(R.layout.activity_detail)
 
         val text = intent.getStringExtra("TODO_NAME")
-        //text.text = text
+        textView.text = text
 
         backButton.setOnClickListener {
             finish()
