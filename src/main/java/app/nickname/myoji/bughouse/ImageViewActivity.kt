@@ -22,7 +22,7 @@ class ImageViewActivity : AppCompatActivity() {
         imageView.load("https://life-is-tech.com/materials/images/summer2019_desktop_3.jpg")
 
         getImageButton.setOnClickListener {
-            val intent = Intent(Intent.ACTION_OPEN_DOCUMENT) .apply{
+            val intent = Intent(Intent.ACTION_OPEN_DOCUMENT).apply {
                 //addCategory(Intent.CATEGORY_OPENABLE)
                 intent.addCategory(Intent.CATEGORY_OPENABLE);
                 //intent.type = "image/*"
@@ -31,12 +31,13 @@ class ImageViewActivity : AppCompatActivity() {
 
             startActivityForResult(intent, 100)
         }
+
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
-        if (requestCode == 100 && resultCode == Activity.RESULT_OK) {
+        if (requestCode == 100 && resultCode == Activity.RESULT_CANCELED) {
             imageView.load(data?.data)
         }
     }
