@@ -32,8 +32,8 @@ class ListActivity : AppCompatActivity() {
             val name = editText.text.toString()
             //taskList.add(Task(name))
             save(name)
-            //adapter.add(name)
-            adapter.addAll(taskList)
+            adapter.add(name)
+            //adapter.addAll(taskList)
 
         }
     }

@@ -39,7 +39,8 @@ class ImageViewActivity : AppCompatActivity() {
 
         if (requestCode == 100 && resultCode == Activity.RESULT_CANCELED) {
             imageView.load(data?.data)
-            imageView.setImageURI(data?.data)
+            //imageView.setImageURI(data?.data)
         }
+        imageView.setImageURI(data?.data)
     }
 }
