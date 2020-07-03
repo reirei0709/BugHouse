@@ -1,5 +1,6 @@
 package app.nickname.myoji.bughouse
 
-data class Task(
-    val name: String
-)
+import android.os.Parcel
+import android.os.Parcelable
+
+data class Task(val name: String)

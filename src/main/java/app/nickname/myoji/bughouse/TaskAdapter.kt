@@ -29,18 +29,18 @@ class TaskAdapter(
         }
         holder.nameTextView.text = item.name
 
+
     }
 
-     fun addAll(items: List<Task>) {
+    fun addAll(items: List<Task>) {
         this.items.addAll(items)
         notifyDataSetChanged()
     }
 
-    fun add(name:String) {
+    fun add(name: Task) {
         this.items.add(name)
-     notifyDataSetChanged()
+        notifyDataSetChanged()
     }
-
 
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -50,5 +50,7 @@ class TaskAdapter(
 
     interface ItemClickListener {
         fun onItemClick(position: Int)
+
+
     }
 }

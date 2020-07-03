@@ -21,6 +21,7 @@ class ListActivity : AppCompatActivity() {
             override fun onItemClick(position: Int) {
                 val intent = Intent(this@ListActivity, DetailActivity::class.java)
                 intent.putExtra("TASK_NAME", taskList[position].name)
+                startActivity(intent)
             }
         })
 
@@ -32,7 +33,8 @@ class ListActivity : AppCompatActivity() {
             val name = editText.text.toString()
             //taskList.add(Task(name))
             save(name)
-            adapter.add(name)
+            var name1= Task(name)
+            adapter.add(name1)
             //adapter.addAll(taskList)
 
         }
